@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name LED_controller_cootprints)(type KiCad)(uri ${KIPRJMOD}/LED_Controller_footprints.pretty)(options "")(descr ""))
+)
