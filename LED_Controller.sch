@@ -433,8 +433,6 @@ F 3 "" H 2100 850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3950 2450
-NoConn ~ 3950 3450
-NoConn ~ 3950 3550
 NoConn ~ 3950 3650
 NoConn ~ 3950 3850
 NoConn ~ 3950 4150
@@ -520,17 +518,6 @@ F 3 "" H 2400 700 60  0000 C CNN
 	1    2400 700 
 	1    0    0    -1  
 $EndComp
-$Comp
-L AVR-ISP-6 CON7
-U 1 1 56B93EA8
-P 7600 1200
-F 0 "CON7" H 7495 1440 50  0000 C CNN
-F 1 "AVR-ISP-6" H 7335 970 50  0000 L BNN
-F 2 "Connect:PINHEAD1-6" V 7080 1240 50  0001 C CNN
-F 3 "" H 7575 1200 60  0000 C CNN
-	1    7600 1200
-	1    0    0    -1  
-$EndComp
 Connection ~ 6800 3400
 Wire Wire Line
 	3950 3950 4250 3950
@@ -589,15 +576,11 @@ Wire Wire Line
 Wire Wire Line
 	6950 2250 6800 2250
 Wire Wire Line
-	4600 3200 3950 3200
-Wire Wire Line
-	4600 7300 4600 3200
+	4600 7300 4600 3550
 Wire Wire Line
 	3600 7300 4600 7300
 Wire Wire Line
-	4700 3100 3950 3100
-Wire Wire Line
-	4700 7200 4700 3100
+	4700 7200 4700 3450
 Wire Wire Line
 	3600 7200 4700 7200
 Wire Wire Line
@@ -789,28 +772,6 @@ Wire Wire Line
 	9850 1950 9250 1950
 Wire Wire Line
 	9850 2050 9250 2050
-Wire Wire Line
-	6900 1100 7450 1100
-Wire Wire Line
-	7450 1200 6900 1200
-Wire Wire Line
-	7450 1300 6900 1300
-Wire Wire Line
-	7700 1100 8100 1100
-Wire Wire Line
-	7700 1200 8100 1200
-Wire Wire Line
-	7700 1300 8100 1300
-Text Label 6900 1100 0    60   ~ 0
-MISO
-Text Label 6900 1200 0    60   ~ 0
-SCK
-Text Label 8100 1100 0    60   ~ 0
-VCC
-Text Label 8100 1200 0    60   ~ 0
-MOSI
-Text Label 8100 1300 0    60   ~ 0
-GND
 Wire Wire Line
 	2400 700  2100 700 
 Wire Wire Line
@@ -1043,8 +1004,6 @@ Text Label 8600 4500 0    60   ~ 0
 BLUE_PWR
 Text Label 3950 2050 0    60   ~ 0
 SS
-Text Label 6900 1300 0    60   ~ 0
-SS
 $Comp
 L Heatsink_50x50mm H1
 U 1 1 56C8EFB7
@@ -1202,4 +1161,64 @@ F 3 "" H 6800 1950 60  0000 C CNN
 	1    6800 1950
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	4700 3450 3950 3450
+Wire Wire Line
+	4600 3550 3950 3550
+Text Label 3950 3100 0    60   ~ 0
+SDA
+Text Label 3950 3200 0    60   ~ 0
+SCL
+$Comp
+L Terminal_Block_2pin TB1
+U 1 1 56CA882A
+P 8100 850
+F 0 "TB1" H 8100 850 60  0000 C CNN
+F 1 "Terminal_Block_2pin" H 8100 950 60  0000 C CNN
+F 2 "LED_controller_footprints:Screw_Terminal" H 8100 850 60  0001 C CNN
+F 3 "" H 8100 850 60  0000 C CNN
+	1    8100 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 56CA88BD
+P 7150 900
+F 0 "#PWR036" H 7150 650 50  0001 C CNN
+F 1 "GND" H 7150 750 50  0000 C CNN
+F 2 "" H 7150 900 60  0000 C CNN
+F 3 "" H 7150 900 60  0000 C CNN
+	1    7150 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR037
+U 1 1 56CA8940
+P 7150 700
+F 0 "#PWR037" H 7150 550 50  0001 C CNN
+F 1 "+5V" H 7150 840 50  0000 C CNN
+F 2 "" H 7150 700 60  0000 C CNN
+F 3 "" H 7150 700 60  0000 C CNN
+	1    7150 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Terminal_Block_2pin TB2
+U 1 1 56CA89F0
+P 8100 1450
+F 0 "TB2" H 8100 1450 60  0000 C CNN
+F 1 "Terminal_Block_2pin" H 8100 1550 60  0000 C CNN
+F 2 "LED_controller_footprints:Screw_Terminal" H 8100 1450 60  0001 C CNN
+F 3 "" H 8100 1450 60  0000 C CNN
+	1    8100 1450
+	1    0    0    -1  
+$EndComp
+Text Label 6950 1300 0    60   ~ 0
+SDA
+Text Label 6950 1500 0    60   ~ 0
+SCL
+Wire Wire Line
+	7150 1300 6950 1300
+Wire Wire Line
+	7150 1500 6950 1500
 $EndSCHEMATC
