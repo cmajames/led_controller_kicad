@@ -1175,7 +1175,7 @@ U 1 1 56CA882A
 P 8100 850
 F 0 "TB1" H 8100 850 60  0000 C CNN
 F 1 "Terminal_Block_2pin" H 8100 950 60  0000 C CNN
-F 2 "" H 8100 850 60  0001 C CNN
+F 2 "LED_controller_footprints:Screw_Terminal" H 8100 850 60  0001 C CNN
 F 3 "" H 8100 850 60  0000 C CNN
 	1    8100 850 
 	1    0    0    -1  
@@ -1208,7 +1208,7 @@ U 1 1 56CA89F0
 P 8100 1450
 F 0 "TB2" H 8100 1450 60  0000 C CNN
 F 1 "Terminal_Block_2pin" H 8100 1550 60  0000 C CNN
-F 2 "" H 8100 1450 60  0001 C CNN
+F 2 "LED_controller_footprints:Screw_Terminal" H 8100 1450 60  0001 C CNN
 F 3 "" H 8100 1450 60  0000 C CNN
 	1    8100 1450
 	1    0    0    -1  
